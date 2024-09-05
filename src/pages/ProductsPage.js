@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import ProductCard from '../components/ProductCard';
-import { fetchProducts } from '../store/productSlice';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import ProductCard from "../components/ProductCard";
+import { fetchProducts } from "../store/productSlice";
+import { Link } from "react-router-dom";
 
 const ProductsPage = () => {
   const [showFavorites, setShowFavorites] = useState(false);
   const dispatch = useDispatch();
   const products = useSelector((state) => state.products);
 
-  // Загружаем данные из API при монтировании компонента
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch]);
@@ -23,12 +22,12 @@ const ProductsPage = () => {
     <div className="products-page">
       <h1>Products</h1>
       <div className="filter">
-      <Link to="/">Back to Home</Link>
+        <Link to="/">Back to Home</Link>
         <button onClick={() => setShowFavorites(!showFavorites)}>
-          {showFavorites ? 'Show All' : 'Show Favorites'}
+          {showFavorites ? "Show All" : "Show Favorites"}
         </button>
-        <Link to={showFavorites ? '/products' : '/favorites'}>
-          {showFavorites ? 'Back to All Products' : 'Go to Favorites'}
+        <Link to={showFavorites ? "/products" : "/favorites"}>
+          {showFavorites ? "Back to All Products" : "Go to Favorites"}
         </Link>
       </div>
       <div className="product-list">

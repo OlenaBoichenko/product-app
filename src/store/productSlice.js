@@ -1,9 +1,9 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-// Асинхронное действие для получения продуктов из API
 export const fetchProducts = createAsyncThunk('products/fetchProducts', async () => {
   const response = await fetch('https://fakestoreapi.com/products');
   const data = await response.json();
+  console.log(data)
   
   // Загрузка состояния избранного из localStorage
   const favorites = JSON.parse(localStorage.getItem('favorites')) || [];

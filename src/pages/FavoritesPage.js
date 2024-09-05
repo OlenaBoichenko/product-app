@@ -1,11 +1,12 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import ProductCard from '../components/ProductCard';
-import { Link } from 'react-router-dom';
-import { selectFavoriteProducts } from '../store/selector';
+import React from "react";
+import { useSelector } from "react-redux";
+import ProductCard from "../components/ProductCard";
+import { Link } from "react-router-dom";
+import { selectFavoriteProducts } from "../store/selector";
 
 const FavoritesPage = () => {
   const favoriteProducts = useSelector(selectFavoriteProducts);
+  console.log();
 
   return (
     <div className="favorites-page">
