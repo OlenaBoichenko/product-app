@@ -9,7 +9,7 @@ const FavoritesPage = () => {
   console.log();
 
   return (
-    <div className="favorites-page">
+    <div className="products-page">
       <h1>Favorites</h1>
       <Link to="/products">Back to All Products</Link>
       <div className="product-list">
