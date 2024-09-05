@@ -1,14 +1,14 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchProducts = createAsyncThunk('products/fetchProducts', async () => {
-  const response = await fetch('https://fakestoreapi.com/products');
+  const response = await fetch('https://proxy-server-oyfw.onrender.com/products');
   const data = await response.json();
   
   const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
   
   return data.map((product) => ({
     ...product,
-    isLiked: favorites.includes(product.id), // Проверяем, находится ли товар в избранном
+    isLiked: favorites.includes(product.id), 
   }));
 });
 
