@@ -23,6 +23,7 @@ const ProductsPage = () => {
       <h1>Products</h1>
       <div className="filter">
         <Link to="/">Back to Home</Link>
+        <Link to="/create-product">Create a Product</Link>
         <button onClick={() => setShowFavorites(!showFavorites)}>
           {showFavorites ? "Show All" : "Show Favorites"}
         </button>

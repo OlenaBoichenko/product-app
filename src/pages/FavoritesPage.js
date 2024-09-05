@@ -6,7 +6,6 @@ import { selectFavoriteProducts } from "../store/selector";
 
 const FavoritesPage = () => {
   const favoriteProducts = useSelector(selectFavoriteProducts);
-  console.log();
 
   return (
     <div className="products-page">

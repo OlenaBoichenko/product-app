@@ -53,9 +53,7 @@ const ProductCard = ({ product }) => {
         onClick={handleDelete}
         style={{cursor: 'pointer', fontSize: '24px'}}
       />
-         
       </div>
-      
     </div>
   );
 };
