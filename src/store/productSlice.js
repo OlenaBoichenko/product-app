@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchProducts = createAsyncThunk('products/fetchProducts', async () => {
-  const response = await fetch('https://proxy-server-oyfw.onrender.com/');
+  const response = await fetch('https://proxy-server-oyfw.onrender.com/products/');
   const data = await response.json();
   
   const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
